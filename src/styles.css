@@ -1,0 +1,39 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.page {
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.link {
+  padding: 16px;
+}
+
+body {
+  background-color: rgba(197, 197, 208, 0.922);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  margin: 0;
+  background-image: url("C:\Users\61406\Music\java training\nodeapi\EmployeeCards\public\sample.jpg");
+}
+
+.header {
+  background-color: black;
+  padding: 0;
+}
+
+.header a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: rgba(197, 197, 208, 0.922);
+  padding: 20px;
+}
