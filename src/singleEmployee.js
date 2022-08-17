@@ -51,7 +51,7 @@ const SingleEmployee = (props) => {
                   color="text.secondary"
                   gutterBottom
                 >
-                  {emp.employee_name}
+                  {emp.firstName}
                 </Typography>
                 <Typography
                   sx={{ fontSize: 14 }}
@@ -59,7 +59,7 @@ const SingleEmployee = (props) => {
                   color="text.secondary"
                   gutterBottom
                 >
-                  {emp.employee_age}
+                  {emp.age}
                 </Typography>
               </Box>
               <Paper
