@@ -6,7 +6,7 @@ const useFetchData = () => {
   useEffect(() => {
     getList()
       .then((items) => {
-        setEmployeeList(items.data);
+        setEmployeeList(items);
       })
       .catch(() => {
         console.log("error");
