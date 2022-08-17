@@ -36,7 +36,7 @@ export default function BasicCard(props) {
               display: "flex",
               flexDirection: "column",
               bgcolor: "grey",
-              marginTop: "15px"
+              marginTop: "15px",
             }}
           >
             <Avatar
@@ -49,7 +49,7 @@ export default function BasicCard(props) {
               color="text.secondary"
               gutterBottom
             >
-              {employee.employee_name}
+              {employee.firstName}
             </Typography>
             <Typography
               sx={{ fontSize: 14 }}
@@ -57,7 +57,7 @@ export default function BasicCard(props) {
               color="text.secondary"
               gutterBottom
             >
-              Age {employee.employee_age}
+              Age {employee.age}
             </Typography>
           </Box>
           <Paper
@@ -65,7 +65,7 @@ export default function BasicCard(props) {
               alignItems: "center",
               display: "flex",
               flexDirection: "column",
-              bgcolor: "#E7F1FC"
+              bgcolor: "#E7F1FC",
             }}
           >
             <Grid container>
