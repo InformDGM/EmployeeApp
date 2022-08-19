@@ -82,7 +82,7 @@ export default function BasicCard(props) {
               <Grid item sx={{ marginTop: 2 }}>
                 <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                   <MailOutlineIcon fontSize="small" />{" "}
-                  <Typography sx={{ paddingLeft: "3px" }}>{email}</Typography>
+                  <Typography sx={{ paddingLeft: "3px" }}>{employee.email}</Typography>
                 </Box>
               </Grid>
             </Grid>
@@ -91,7 +91,7 @@ export default function BasicCard(props) {
                 <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                   <PhoneIcon fontSize="small" />{" "}
                   <Typography sx={{ paddingLeft: "3px" }}>
-                    {phoneNumber}
+                    {employee.phoneNumber}
                   </Typography>
                 </Box>
               </Grid>
