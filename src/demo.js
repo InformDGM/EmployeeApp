@@ -93,7 +93,7 @@ export default function BasicCard(props) {
                 <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                   <PhoneIcon fontSize="small" />{" "}
                   <Typography sx={{ paddingLeft: "3px" }}>
-                    {employee.phoneNumber}
+                    {employee.phone}
                   </Typography>
                 </Box>
               </Grid>
