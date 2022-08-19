@@ -10,15 +10,11 @@ import Grid from "@mui/material/Grid";
 import Avatar from "@mui/material/Avatar";
 import Paper from "@mui/material/Paper";
 import PhoneIcon from "@mui/icons-material/Phone";
-import { faker } from "@faker-js/faker";
 import FormLabel from "@mui/material/FormLabel";
 import { useNavigate } from "react-router-dom";
 
 export default function BasicCard(props) {
   const { employee } = props;
-  const avatarUrl = faker.image.avatar();
-  const phoneNumber = faker.phone.phoneNumber();
-  const email = faker.internet.email();
   let navigate = useNavigate();
   return (
     <Grid item xs={3} sx={{ border: "1px solid yellow" }}>
@@ -49,7 +45,7 @@ export default function BasicCard(props) {
               color="text.secondary"
               gutterBottom
             >
-              {employee.firstName}
+              First Name {employee.firstName}
             </Typography>
             <Typography
               sx={{ fontSize: 14 }}
