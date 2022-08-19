@@ -41,7 +41,7 @@ export default function BasicCard(props) {
               sx={{ width: 100, height: 100 }}
             />
             <Typography
-              sx={{ fontSize: 14, paddingTop: 10 }}
+              sx={{ fontSize: 14, paddingTop: 18 }}
               color="text.secondary"
               gutterBottom
             >
