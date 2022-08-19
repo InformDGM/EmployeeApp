@@ -41,11 +41,11 @@ export default function BasicCard(props) {
               sx={{ width: 100, height: 100 }}
             />
             <Typography
-              sx={{ fontSize: 14 }}
+              sx={{ fontSize: 14, paddingTop: 10 }}
               color="text.secondary"
               gutterBottom
             >
-              First Name {employee.firstName}
+              {employee.firstName}
             </Typography>
             <Typography
               sx={{ fontSize: 14 }}
