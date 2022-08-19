@@ -37,7 +37,7 @@ export default function BasicCard(props) {
           >
             <Avatar
               alt="employee1"
-              src={avatarUrl}
+              src={employee.avatarUrl}
               sx={{ width: 100, height: 100 }}
             />
             <Typography
