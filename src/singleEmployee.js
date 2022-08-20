@@ -89,7 +89,7 @@ const SingleEmployee = (props) => {
                     <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                       <MailOutlineIcon fontSize="small" />{" "}
                       <Typography sx={{ paddingLeft: "3px" }}>
-                        emp.email
+                        {emp.email}
                       </Typography>
                     </Box>
                   </Grid>
@@ -99,7 +99,7 @@ const SingleEmployee = (props) => {
                     <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                       <PhoneIcon fontSize="small" />{" "}
                       <Typography sx={{ paddingLeft: "3px" }}>
-                        emp.phone
+                        {emp.phone}
                       </Typography>
                     </Box>
                   </Grid>
