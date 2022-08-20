@@ -5,7 +5,8 @@ import SingleEmployee from "./singleEmployee";
 import "./styles.css";
 import useFetchData from "./useFetchData";
 import HomePage from "./HomePage";
-import logo from "../src"
+import logo from "../src";
+import EmployeeRegistration from "./employeeRegistration.js";
 export default function App() {
   const { employeeList } = useFetchData();
   return (
@@ -20,6 +21,9 @@ export default function App() {
         <Link to="/employees/1" className="link">
           SingleEmployee
         </Link>
+        <Link to="/employee/registration" className="link">
+          EmployeeRegistration
+        </Link>
       </div>
       <div className="content"></div>
       <Routes>
@@ -31,6 +35,10 @@ export default function App() {
         <Route
           path="/employees/:id"
           element={<SingleEmployee employeeList={employeeList} />}
+        />
+        <Route
+          path="/employee/registration"
+          element={<EmployeeRegistration />}
         />
       </Routes>
     </BrowserRouter>
