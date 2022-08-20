@@ -82,9 +82,13 @@ export default function BasicCard(props) {
               <Grid item sx={{ marginTop: 2 }}>
                 <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                   <MailOutlineIcon fontSize="small" />{" "}
+<<<<<<< HEAD
                   <Typography sx={{ paddingLeft: "3px" }}>
                     {employee.email}
                   </Typography>
+=======
+                  <Typography sx={{ paddingLeft: "3px" }}>{employee.email}</Typography>
+>>>>>>> 816899901e91e4a555e5ff03bd40baef8f6a9efb
                 </Box>
               </Grid>
             </Grid>
@@ -93,7 +97,11 @@ export default function BasicCard(props) {
                 <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                   <PhoneIcon fontSize="small" />{" "}
                   <Typography sx={{ paddingLeft: "3px" }}>
+<<<<<<< HEAD
                     {employee.phone}
+=======
+                    {employee.phoneNumber}
+>>>>>>> 816899901e91e4a555e5ff03bd40baef8f6a9efb
                   </Typography>
                 </Box>
               </Grid>
