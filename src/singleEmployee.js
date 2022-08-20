@@ -43,7 +43,7 @@ const SingleEmployee = (props) => {
               >
                 <Avatar
                   alt="employee1"
-                  src={avatarUrl}
+                  src={emp.avatarUrl}
                   sx={{ width: 100, height: 100 }}
                 />
                 <Typography
@@ -89,7 +89,7 @@ const SingleEmployee = (props) => {
                     <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                       <MailOutlineIcon fontSize="small" />{" "}
                       <Typography sx={{ paddingLeft: "3px" }}>
-                        Email:
+                        emp.email
                       </Typography>
                     </Box>
                   </Grid>
@@ -99,7 +99,7 @@ const SingleEmployee = (props) => {
                     <Box sx={{ display: "Inline-flex", alignItems: "center" }}>
                       <PhoneIcon fontSize="small" />{" "}
                       <Typography sx={{ paddingLeft: "3px" }}>
-                        Phone Number
+                        emp.phone
                       </Typography>
                     </Box>
                   </Grid>

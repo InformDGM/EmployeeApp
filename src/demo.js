@@ -86,7 +86,7 @@ export default function BasicCard(props) {
                     {employee.email}
                   </Typography>
                   <Typography sx={{ paddingLeft: "3px" }}>
-                    {employee.email}
+                    {employee.phone}
                   </Typography>
                 </Box>
               </Grid>
