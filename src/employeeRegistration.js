@@ -48,7 +48,7 @@ const EmployeeRegistration = (props) => {
 
   const handleReset = () => {
     this.setState({
-      defaultValues: [{}],
+      formValues: [{}],
     });
   };
 
