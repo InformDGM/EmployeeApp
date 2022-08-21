@@ -46,6 +46,12 @@ const EmployeeRegistration = (props) => {
     alert(JSON.stringify(formValues));
   };
 
+  const handleReset = () => {
+    this.setState({
+      defaultValues: [{}],
+    });
+  };
+
   return (
     <Paper>
       <Box sx={{ "& button": { m: 1 } }}>
@@ -67,7 +73,6 @@ const EmployeeRegistration = (props) => {
             value={formValues.lastName}
             onChange={handleInputChange}
           />
-          <br />
           <div className="age">
             <TextField
               id="age-input"
@@ -112,7 +117,11 @@ const EmployeeRegistration = (props) => {
             <Button variant="contained" size="medium" type="submit">
               Submit
             </Button>
-            <Button onClick={() => reset()} variant={"outlined"} type="button">
+            <Button
+              onClick={() => handleReset()}
+              variant={"outlined"}
+              type="button"
+            >
               Reset
             </Button>
           </div>
