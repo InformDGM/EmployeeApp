@@ -24,6 +24,9 @@ export default function App() {
         <Link to="/employee/registration" className="link">
           EmployeeRegistration
         </Link>
+        <Link to="/employee/registration" className="link">
+          EmployeeSearch
+        </Link>
       </div>
       <div className="content"></div>
       <Routes>
@@ -40,6 +43,7 @@ export default function App() {
           path="/employee/registration"
           element={<EmployeeRegistration />}
         />
+        <Route path="/employee/search" element={<EmployeeSearch />} />
       </Routes>
     </BrowserRouter>
   );
