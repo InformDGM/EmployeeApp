@@ -7,7 +7,7 @@ import useFetchData from "./useFetchData";
 import HomePage from "./HomePage";
 import logo from "../src";
 import EmployeeRegistration from "./employeeRegistration.js";
-import EmployeeSearch from "./employeeRegistration";
+import EmployeeSearch from "./employeeSearch";
 export default function App() {
   const { employeeList } = useFetchData();
   return (
