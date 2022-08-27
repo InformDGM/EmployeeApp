@@ -25,7 +25,7 @@ export default function App() {
         <Link to="/employee/registration" className="link">
           EmployeeRegistration
         </Link>
-        <Link to="/employee/registration" className="link">
+        <Link to="/employee/search" className="link">
           EmployeeSearch
         </Link>
       </div>
