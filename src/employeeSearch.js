@@ -1,62 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
-import { LineAxisOutlined } from "@mui/icons-material";
-import { response } from "express";
-
+import { Card, Input } from "semantic-ui-react";
+import _debounce from "lodash/debounce";
 export default function EmployeeSearch() {
   const [APIData, setAPIData] = useState([]);
-  const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        "https://mockend.com/InformDGM/MockendDB/users/"
-      );
-      setAPIData(response.data);
-    };
-    fetchData();
-  }, []);
-  const searchItems = (searchValue) => {
-    setSearchInput(searchValue);
-    if (searchInput !== "") {
-      const filteredData = APIData.filter((item) => {
-        return Object.values(item)
-          .join("")
-          .toLowerCase()
-          .includes(searchInput.toLowerCase());
-      });
-      setFilteredResults(filteredData);
-    } else {
-      setFilteredResults(APIData);
-    }
+  const handleDebounceFn = async (searchInput) => {
+    const result = await axios(
+      `https://mockend.com/InformDGM/MockendDB/users?firstName_startsWith=${searchInput}`
+    );
+    setAPIData(result?.data || []);
   };
+  const debounceFn = useCallback(_debounce(handleDebounceFn, 1000), []);
+
+  useEffect(() => {
+    if (searchInput !== "") {
+      const result = debounceFn(searchInput);
+    }
+  }, [searchInput]);
+
   return (
-    <div style={{ padding: 20 }}>
+    <div>
       <Input
         icon="search"
         placeholder="Search..."
-        onChange={(e) => searchItems(e.target.value)}
+        onChange={(e) => setSearchInput(e.target.value)}
       />
       <Card.Group itemsPerRow={3} style={{ marginTop: 20 }}>
-        {searchInput.length > 1
-          ? filteredResults.map((item) => {
-              return (
-                <Card>
-                  <Card.Content>
-                    <Card.Header>{item.firstName}</Card.Header>
-                  </Card.Content>
-                </Card>
-              );
-            })
-          : APIData.map((item) => {
-              return (
-                <Card>
-                  <Card.Content>
-                    <Card.Header>{item.firstName}</Card.Header>
-                  </Card.Content>
-                </Card>
-              );
-            })}
+        {APIData.map((item) => {
+          return (
+            <Card key={item.id}>
+              <Card.Content>
+                <Card.Header style={{ color: "white" }}>
+                  {item.firstName}
+                </Card.Header>
+              </Card.Content>
+            </Card>
+          );
+        })}
       </Card.Group>
     </div>
   );

@@ -8,6 +8,8 @@ import HomePage from "./HomePage";
 import logo from "../src";
 import EmployeeRegistration from "./employeeRegistration.js";
 import EmployeeSearch from "./employeeSearch";
+import ImageSearch from "./imageSearch.js";
+import ImagePagination from "./imagePagination.js";
 export default function App() {
   const { employeeList } = useFetchData();
   return (
@@ -28,6 +30,12 @@ export default function App() {
         <Link to="/employee/search" className="link">
           EmployeeSearch
         </Link>
+        <Link to="/image/search" className="link">
+          ImageSearch
+        </Link>
+        <Link to="/image/pagination" className="link">
+          ImagePagination
+        </Link>
       </div>
       <div className="content"></div>
       <Routes>
@@ -45,6 +53,8 @@ export default function App() {
           element={<EmployeeRegistration />}
         />
         <Route path="/employee/search" element={<EmployeeSearch />} />
+        <Route path="/image/search" element={<ImageSearch />} />
+        <Route path="/image/pagination" element={<ImagePagination />} />
       </Routes>
     </BrowserRouter>
   );

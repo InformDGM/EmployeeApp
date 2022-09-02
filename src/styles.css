@@ -24,7 +24,9 @@ body {
   background-color: black;
   padding: 0;
 }
-
+.pagination {
+  text-align: center;
+}
 .header a {
   color: #fff;
   font-weight: bold;
