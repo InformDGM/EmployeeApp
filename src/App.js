@@ -10,6 +10,10 @@ import EmployeeRegistration from "./employeeRegistration.js";
 import EmployeeSearch from "./employeeSearch";
 import ImageSearch from "./imageSearch.js";
 import ImagePagination from "./imagePagination.js";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+
 export default function App() {
   const { employeeList } = useFetchData();
   return (
